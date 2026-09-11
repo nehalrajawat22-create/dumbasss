@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Date?</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6ee;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #ff4081;
+        }
+
+        button {
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 22px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 id="question">be mine dumbass?</h1>
+
+    <button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
+
+    <button id="noBtn" onclick="noClicked()">No 😭</button>
+
+</div>
+
+<script>
+
+let yesSize = 22;
+
+function noClicked() {
+
+    yesSize += 15;
+
+    document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+
+}
+
+function yesClicked() {
+
+    document.getElementById("question").innerHTML =
+        "hahahaha u are already mine lol.";
+
+    document.getElementById("yesBtn").style.display = "none";
+
+    document.getElementById("noBtn").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
